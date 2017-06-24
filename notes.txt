@@ -1,0 +1,7 @@
+Methods, functions, etc used:
+
+math.random() - generate random bet 0 and 1
+math.floor - remove decimal parts of a number
+.querySelector('.class or #id') - works like a css selector but only select the first element that it finds
+.textContent - change the value of the target querySelector, converts as strings
+.innerHTML - change the value of the target querySelector, can put HTML codes and strings
