@@ -6,16 +6,37 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,600" rel="stylesheet" type="text/css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="img/pig.ico" />
     <title>Pig Game</title>
 </head>
 
 <body>
     <div class="outer">
+
         <div class="middle">
+            <div class="score-container">
+                <h2>Final Score: <span id="side-score">100</span></h2>
+            </div>
+
+            <div class="player-names">
+                <img src="img/pig.png" alt="" class="pig-icon" />
+                <h1>Player names</h1>
+                <input id="player-name-1" type="text" maxlength="10" placeholder="Player 1" onblur="checkInput()"/>
+                <input id="player-name-2" type="text" maxlength="10" placeholder="Player 2" onblur="checkInput2()"/>
+                <h1>Final Score</h1>
+                <input id="final-score"type="number" min="0" max="9999" maxlength = "4" step="10" placeholder="Default: 100"  oninput="maxLengthCheck(this)" onblur="checkInput()"/>
+
+                <button class="btn-enter" id="btn-enter">Enter</button>
+                <div class="line"></div>
+                <h4 class="copyright">Pig Dice Game | &copy Supermike Adventures 2017</h4>
+            </div>
+
+            <div class="blur">
+            </div>
 
             <div class="wrapper clearfix">
                 <div class="player-0-panel active">
+                    <div class="winner-name" id="winner-0">WINNER!!</div>
                     <div class="player-content">
                         <div class="player-name" id="name-0">Player 1</div>
                         <div class="player-score" id="score-0">43</div>
@@ -27,6 +48,7 @@
                 </div>
 
                 <div class="player-1-panel">
+                    <div class="winner-name" id="winner-1">WINNER!!</div>
                     <div class="player-content">
                         <div class="player-name" id="name-1">Player 2</div>
                         <div class="player-score" id="score-1">72</div>
@@ -37,17 +59,27 @@
                     </div>
                 </div>
 
+                <img src="img/dice-5.png" alt="Dice" class="dice" id="dice-1">
+                <img src="img/dice-5.png" alt="Dice" class="dice" id="dice-2">
+            </div>
+
+            <div id="button-container">
                 <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
                 <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
                 <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-
-                <img src="img/dice-5.png" alt="Dice" class="dice">
             </div>
         </div>
     </div>
-    <h4 class="copyright">Pig Game | &copy Supermike Adventures 2017</h4>
 
     <script src="app.js"></script>
+
+    <script>
+        function maxLengthCheck(object)
+        {
+            if (object.value.length > object.maxLength)
+                object.value = object.value.slice(0, object.maxLength)
+        }
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,26 @@
 Methods, functions, etc used:
+------------------------------------------------------------------------------------------------------------------
 
 math.random() - generate random bet 0 and 1
+
 math.floor - remove decimal parts of a number
+
 .querySelector('.class or #id') - works like a css selector but only select the first element that it finds
+
 .textContent - change the value of the target querySelector, converts as strings
+
 .innerHTML - change the value of the target querySelector, can put HTML codes and strings
+
+.addEventListener('event', function) - listen to events
+
+variableName === value ? do something : do something else - itenary operator
+
+.classList.add('newClassName') - add new class to an element
+
+.classList.remove('existingClassName') - remove class to an element
+
+.classList.toggle('existingClassName') - toggle/add and removes the class to an element
+
+.value - get value of the target element (input)
+
+.setTimeout(function () { //do something, 1000 }); - do something after the specified time
